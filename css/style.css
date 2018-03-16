@@ -1,5 +1,4 @@
 body {
-  background: #e4e4e4;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   text-rendering: optimizeLegibility;
@@ -13,6 +12,7 @@ body {
   position: fixed;
   background: white;
   font-size: 14px;
+  z-index: 999;
   font-family: 'Merriweather', serif; }
   .header .branding {
     height: 90px;
@@ -126,5 +126,103 @@ body {
       color: #AD976E; }
       .header .appointment a:hover {
         color: #3a3a3a; }
+
+.content-entry {
+  margin-top: 90px; }
+
+.carousel {
+  width: 100%;
+  min-height: 70vh;
+  position: relative; }
+  .carousel .carousel-inner .carousel-item {
+    min-height: 70vh;
+    width: 100%;
+    background: green;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important; }
+    .carousel .carousel-inner .carousel-item .container .row {
+      color: white;
+      display: flex;
+      align-items: center;
+      height: 70vh; }
+      .carousel .carousel-inner .carousel-item .container .row h1 {
+        letter-spacing: 0.1rem;
+        font-size: 2.6rem;
+        font-family: 'Merriweather', serif; }
+      .carousel .carousel-inner .carousel-item .container .row h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem; }
+  .carousel .controls {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%); }
+    .carousel .controls .carousel-control-next, .carousel .controls .carousel-control-prev {
+      opacity: 1;
+      color: #bcbcbc;
+      top: 42px;
+      font-size: 12px; }
+      .carousel .controls .carousel-control-next svg, .carousel .controls .carousel-control-prev svg {
+        width: 16px; }
+      .carousel .controls .carousel-control-next .st0, .carousel .controls .carousel-control-prev .st0 {
+        fill: #424242;
+        width: 20px; }
+      .carousel .controls .carousel-control-next:hover .st0, .carousel .controls .carousel-control-prev:hover .st0 {
+        fill: #AD976E; }
+    .carousel .controls .carousel-control-prev {
+      right: 44px;
+      left: inherit;
+      transform: rotate(180deg); }
+    .carousel .controls .carousel-control-next {
+      right: 12px; }
+    .carousel .controls .seperator {
+      min-width: 1px;
+      min-height: 24px;
+      background: #c1c1c1;
+      position: absolute;
+      right: 36px;
+      top: 50px;
+      transform: rotate(20deg); }
+  .carousel .down {
+    width: 60px;
+    height: 50px;
+    background: #ad976e;
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    animation-name: down;
+    animation-duration: 2.4s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: forward; }
+    .carousel .down:hover {
+      background: #a48b5e; }
+    .carousel .down svg {
+      width: 24px;
+      transform: rotate(90deg);
+      margin: 0 auto;
+      padding-right: 2px; }
+    .carousel .down .st0 {
+      fill: #fff; }
+
+@keyframes down {
+  0% {
+    bottom: -25px; }
+  50% {
+    bottom: -30px; }
+  100% {
+    bottom: -25px; } }
 
 /*# sourceMappingURL=style.css.map */
