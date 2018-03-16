@@ -36,6 +36,8 @@ body {
     .header .container .row .main_menu {
       display: flex;
       align-items: center; }
+      .header .container .row .main_menu div {
+        margin: 0 auto; }
       .header .container .row .main_menu ul {
         padding: 0;
         float: right;

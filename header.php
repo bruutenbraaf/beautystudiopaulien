@@ -22,7 +22,7 @@
 			</a>
 			<div class="col-md-2">	
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 main_menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'hoofd_menu' ) ); ?>
 			</div>
 			<div class="col-md-2 appointment">	
