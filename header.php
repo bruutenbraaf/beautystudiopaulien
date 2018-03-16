@@ -13,15 +13,20 @@
 <div class="header">
 	<div class="container">
 		<div class="row">
-			<div class="branding">				
-				<?php if ( get_field( 'logo', 'option' ) ) { ?>
-					<img src="<?php the_field( 'logo', 'option' ); ?>" />
-				<?php } ?>		
-			</div>
-			<div class="col-md-4">		
+			<a href="<?php echo get_home_url(); ?>">
+				<div class="branding">				
+					<?php if ( get_field( 'logo', 'option' ) ) { ?>
+						<img src="<?php the_field( 'logo', 'option' ); ?>" />
+					<?php } ?>		
+				</div>
+			</a>
+			<div class="col-md-2">	
 			</div>
 			<div class="col-md-8">
 				<?php wp_nav_menu( array( 'theme_location' => 'hoofd_menu' ) ); ?>
+			</div>
+			<div class="col-md-2 appointment">	
+				<a href="<?php the_field( 'appointment_link', 'option' ); ?>"><?php the_field( 'appointment_text', 'option' ); ?></a>
 			</div>
 		</div>
 	</div>

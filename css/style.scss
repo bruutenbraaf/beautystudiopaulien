@@ -2,6 +2,7 @@ $head_color: #AD976E;
 $header_height: 90px;
 $header_logo_width: 220px;
 $header_logo_background: #AD976E;
+$header_link_background: #ad976e;
 $header_links_colors: #3a3a3a;
 $transition_duration: 0.2s;
 
@@ -32,6 +33,9 @@ body {
 		display: flex;
 		text-align: center;
 		align-items: center;
+		&:hover {
+			background: darken($header_logo_background, 5%);
+		}
 		img {
 			height: 76px;
 			margin: 0 auto;
@@ -42,29 +46,33 @@ body {
 			height: $header_height;
 			display: flex;
 			align-items: center;
-			ul {
-				margin:0;
-				padding:0;
-				float:right;
-				list-style: none;
-				margin:0px -14px;
-				li {
-					float:left;
-					transition-duration: $transition_duration;
-					}
-					a {
-						padding:14px;
-						color: $header_links_colors;
+			.menu-hoofdmenu-container {
+				display: flex;
+				align-items: center;
+				ul {
+					padding:0;
+					float:right;
+					list-style: none;
+					margin: 0 auto;
+					li {
+						float:left;
 						transition-duration: $transition_duration;
-						&:hover {
-							color: $head_color;
-							text-decoration: none;
+						}
+						a {
+							padding:14px;
+							color: $header_links_colors;
 							transition-duration: $transition_duration;
+							&:hover {
+								color: $head_color;
+								text-decoration: none;
+								transition-duration: $transition_duration;
+							}
 						}
 					}
-				}
 				li.menu-item-has-children {
 					a {
+						position: relative;
+						padding:14px 28px 14px 14px;
 						&:hover {
 							transition-duration: $transition_duration;
 							> .sub-menu {
@@ -95,11 +103,11 @@ body {
 					    a {
 						    padding: 6px 38px 6px 12px;
 						    color: #fff;
-						    background: #ad976e;
+						    background: $header_link_background;
 						    position: relative;
 						    display: block;
 						    &:hover {
-							    background: #9d8760;
+							    background: darken($header_link_background, 5%);
 						    }
 					    }
 				    }
@@ -108,7 +116,17 @@ body {
 			.menu-item-has-children {
 				a {
 					&:after {
-						content:'>';
+						content: '\f107';
+					    font-family: fontAwesome;
+					    position: absolute;
+					    right: 8px;
+					    top: 12px;
+					    -webkit-transition: all .3s cubic-bezier(.06,.65,.34,1);
+					    -o-transition: all .3s cubic-bezier(.06,.65,.34,99);
+					    transition: all .3s cubic-bezier(.06,.65,.34,.99);
+					    transition-property: all;
+					    transition-duration: 0.3s;
+					    transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99);
 					}
 				}
 				&:hover ul.sub-menu {
@@ -129,6 +147,29 @@ body {
 					border-radius: 2px 2px 0px 0px;
 					background: $head_color;
 				}
+			}
+			ul.sub-menu li {
+				a {
+					&:after {
+						content:'\f105';
+						top:6px;
+						right:10px;
+					}
+					&:hover:after {
+						right: 8px;
+					}
+					}
+				}
+			}
+		}
+	}
+	.appointment {
+		text-align: right;
+		a {
+			font-weight: 600;
+			color:$head_color;
+			&:hover {
+				color:$header_links_colors;
 			}
 		}
 	}
