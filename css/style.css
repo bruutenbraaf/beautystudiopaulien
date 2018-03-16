@@ -33,33 +33,33 @@ body {
     height: 90px;
     display: flex;
     align-items: center; }
-    .header .container .row .menu-hoofdmenu-container {
+    .header .container .row .main_menu {
       display: flex;
       align-items: center; }
-      .header .container .row .menu-hoofdmenu-container ul {
+      .header .container .row .main_menu ul {
         padding: 0;
         float: right;
         list-style: none;
         margin: 0 auto; }
-        .header .container .row .menu-hoofdmenu-container ul li {
+        .header .container .row .main_menu ul li {
           float: left;
           transition-duration: 0.2s; }
-        .header .container .row .menu-hoofdmenu-container ul a {
+        .header .container .row .main_menu ul a {
           padding: 14px;
           color: #3a3a3a;
           transition-duration: 0.2s; }
-          .header .container .row .menu-hoofdmenu-container ul a:hover {
+          .header .container .row .main_menu ul a:hover {
             color: #AD976E;
             text-decoration: none;
             transition-duration: 0.2s; }
-      .header .container .row .menu-hoofdmenu-container li.menu-item-has-children a {
+      .header .container .row .main_menu li.menu-item-has-children a {
         position: relative;
         padding: 14px 28px 14px 14px; }
-        .header .container .row .menu-hoofdmenu-container li.menu-item-has-children a:hover {
+        .header .container .row .main_menu li.menu-item-has-children a:hover {
           transition-duration: 0.2s; }
-          .header .container .row .menu-hoofdmenu-container li.menu-item-has-children a:hover > .sub-menu {
+          .header .container .row .main_menu li.menu-item-has-children a:hover > .sub-menu {
             display: block; }
-      .header .container .row .menu-hoofdmenu-container li.menu-item-has-children .sub-menu {
+      .header .container .row .main_menu li.menu-item-has-children .sub-menu {
         position: absolute;
         z-index: 999;
         margin: 0px 0px;
@@ -77,17 +77,17 @@ body {
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99); }
-        .header .container .row .menu-hoofdmenu-container li.menu-item-has-children .sub-menu li {
+        .header .container .row .main_menu li.menu-item-has-children .sub-menu li {
           float: none; }
-          .header .container .row .menu-hoofdmenu-container li.menu-item-has-children .sub-menu li a {
+          .header .container .row .main_menu li.menu-item-has-children .sub-menu li a {
             padding: 6px 38px 6px 12px;
             color: #fff;
             background: #ad976e;
             position: relative;
             display: block; }
-            .header .container .row .menu-hoofdmenu-container li.menu-item-has-children .sub-menu li a:hover {
+            .header .container .row .main_menu li.menu-item-has-children .sub-menu li a:hover {
               background: #a48b5e; }
-      .header .container .row .menu-hoofdmenu-container .menu-item-has-children a:after {
+      .header .container .row .main_menu .menu-item-has-children a:after {
         content: '\f107';
         font-family: fontAwesome;
         position: absolute;
@@ -99,7 +99,7 @@ body {
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99); }
-      .header .container .row .menu-hoofdmenu-container .menu-item-has-children:hover ul.sub-menu {
+      .header .container .row .main_menu .menu-item-has-children:hover ul.sub-menu {
         visibility: visible;
         opacity: 1;
         margin-top: 12px;
@@ -109,15 +109,15 @@ body {
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99); }
-      .header .container .row .menu-hoofdmenu-container .menu-item-has-children:hover a {
+      .header .container .row .main_menu .menu-item-has-children:hover a {
         color: white;
         border-radius: 2px 2px 0px 0px;
         background: #AD976E; }
-      .header .container .row .menu-hoofdmenu-container ul.sub-menu li a:after {
+      .header .container .row .main_menu ul.sub-menu li a:after {
         content: '\f105';
         top: 6px;
         right: 10px; }
-      .header .container .row .menu-hoofdmenu-container ul.sub-menu li a:hover:after {
+      .header .container .row .main_menu ul.sub-menu li a:hover:after {
         right: 8px; }
   .header .appointment {
     text-align: right; }
