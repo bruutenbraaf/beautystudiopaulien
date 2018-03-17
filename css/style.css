@@ -363,6 +363,49 @@ p {
       .informatie_content .col-md-6:nth-child(2) .button:hover {
         background: #3a3a3a; }
 
+.footer {
+  color: white;
+  z-index: 55;
+  position: relative;
+  margin-top: -30px;
+  background: #3a3a3a;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
+  .footer .container {
+    position: relative; }
+    .footer .container .row h2 {
+      padding-bottom: 12px;
+      font-size: 1.1rem;
+      color: white;
+      font-family: Merriweather,serif; }
+    .footer .container .row p {
+      font-size: 16px;
+      color: white; }
+    .footer .container .row li {
+      list-style: none; }
+  .footer .container .row {
+    padding: 66px 0px; }
+
+.copyright .container {
+  position: relative; }
+  .copyright .container .row {
+    height: 60px;
+    display: flex;
+    font-size: 14px;
+    align-items: center; }
+.copyright .conditions {
+  text-align: center; }
+.copyright .social {
+  transform: rotate(-1deg);
+  right: 15px;
+  color: white;
+  top: -2px;
+  position: absolute;
+  padding: 4px 28px 12px;
+  background: #ad976e;
+  -webkit-clip-path: polygon(0 0, 100% 0, 83% 85%, 18% 85%);
+  clip-path: polygon(0 0, 100% 0, 83% 85%, 18% 85%); }
+
 @keyframes down {
   0% {
     bottom: -25px; }

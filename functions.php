@@ -23,11 +23,26 @@ add_action( 'init', 'register_my_menus' );
 	function arphabet_widgets_init() {
 		
 		register_sidebar( array(
-			'name'          => 'Sidebar',
-			'id'            => 'sidebar',
-			'before_widget' => '<div class="sidebar">',
-			'after_widget'  => '</div>',
-		) );							
+			'name'          => 'Footer een',
+			'id'            => 'footer_een',
+
+		) );
+		
+		register_sidebar( array(
+			'name'          => 'Footer twee',
+			'id'            => 'footer_twee',
+		) );	
+		
+		register_sidebar( array(
+			'name'          => 'Footer drie',
+			'id'            => 'footer_drie',
+		) );	
+		
+		register_sidebar( array(
+			'name'          => 'Footer vier',
+			'id'            => 'footer_vier',
+		) );		
+								
 }
 
 add_action( 'widgets_init', 'arphabet_widgets_init' );
@@ -80,6 +95,9 @@ acf_add_options_page( array(
 'position' => 9
 
 ) );
+
+
+
 
 
 ?>
