@@ -70,5 +70,16 @@ acf_add_options_page( array(
 
 ) );
 
+acf_add_options_page( array(
+
+'page_title' 	=> 'Over ons homepagina',
+'menu_title' 	=> 'Over ons',
+'menu_slug' 	=> 'over-ons',
+'capability' 	=> 'edit_posts', 
+'icon_url' => 'dashicons-id-alt',
+'position' => 9
+
+) );
+
 
 ?>

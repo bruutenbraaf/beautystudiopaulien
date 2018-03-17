@@ -19,6 +19,9 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    img {
+	    max-width: 100%;
+    }
 }
 .header {
 	top: 0;
@@ -436,6 +439,39 @@ body {
 			background:rgba(0,0,0,0.3);
 		}
 	}
+	
+.informatie_content {
+	padding: 86px 0 66px 0px;
+    display: block;
+    background: #f3f3f3;
+    margin-top: -26px;
+    img {
+	    border-radius: 2px 0px 0px 2px;
+    }
+    .col-md-6:nth-child(2) {
+	    background: white;
+	    margin-left:-15px;
+	    padding:24px;
+	    box-sizing: border-box;
+	    border-radius: 2px 2px 0px 0px;
+	    h1 {
+		    color:$secondaire_color;
+		    font-size: 1.5rem;
+	    }
+	    h2 {
+		    color: $head_color;
+		    font-size: 0.8rem;
+	    }
+	    .button {
+		    background: $head_color;
+		    margin-top:20px;
+		    line-height: 3;
+		    &:hover {
+			    background: $secondaire_color;
+		    }
+	    }
+    }
+}
 
 @keyframes down {
   0% {

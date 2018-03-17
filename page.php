@@ -109,5 +109,22 @@ get_header(); ?>
 				</div>				
 			</div>
 		<?php } ?>
+	<?php if ( get_field( 'about_afbeelding', 'option' ) ) { ?>
+		<div class="informatie_content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="<?php the_field( 'about_afbeelding', 'option' ); ?>">
+					</div>
+					<div class="col-md-6">
+						<h1><?php the_field( 'about_titel', 'option' ); ?></h1>
+						<h2><?php the_field( 'about_sub_titel', 'option' ); ?></h2>
+						<?php the_field( 'about_tekst', 'option' ); ?>
+						<a class="button" href="<?php the_field( 'knop_link', 'option' ); ?>"><?php the_field( 'about_knop_tekst', 'option' ); ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>	
 	<?php endif; ?>
 <?php get_footer(); ?>
