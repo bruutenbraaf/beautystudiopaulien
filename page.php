@@ -93,6 +93,21 @@ get_header(); ?>
 					</div>			
 				</div>
 			</div>
-		</div>			
+		</div>
+		<?php if ( get_field( 'aanbieding_afbeelding', 'option' ) ) { ?>			
+			<div class="feautured_image" style="background:url('<?php the_field( 'aanbieding_afbeelding', 'option' ); ?>');">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<h1><?php the_field( 'aanbieding_titel', 'option' ); ?></h1>
+							<h2><?php the_field( 'aanbieding_sub_titel', 'option' ); ?></h2>
+						</div>
+						<a href="<?php the_field( 'aanbieding_knop_link', 'option' ); ?>" class="button"><?php the_field( 'aanbieding_knop', 'option' ); ?></a>
+					</div>
+				</div>
+				<div class="cover">
+				</div>				
+			</div>
+		<?php } ?>
 	<?php endif; ?>
 <?php get_footer(); ?>

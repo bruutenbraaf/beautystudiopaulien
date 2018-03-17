@@ -59,5 +59,16 @@ acf_add_options_page( array(
 
 ) );
 
+acf_add_options_page( array(
+
+'page_title' 	=> 'Onze aanbiedingen',
+'menu_title' 	=> 'Aanbieding',
+'menu_slug' 	=> 'aanbiedingen',
+'capability' 	=> 'edit_posts', 
+'icon_url' => 'dashicons-tag',
+'position' => 9
+
+) );
+
 
 ?>
