@@ -376,13 +376,41 @@ p {
     .footer .container .row h2 {
       padding-bottom: 12px;
       font-size: 1.1rem;
-      color: white;
+      color: #AD976E;
       font-family: Merriweather,serif; }
     .footer .container .row p {
       font-size: 16px;
       color: white; }
+    .footer .container .row .fa {
+      padding-right: 8px; }
     .footer .container .row li {
       list-style: none; }
+    .footer .container .row .menu {
+      margin: 0px;
+      padding: 0px; }
+      .footer .container .row .menu a {
+        color: #fff;
+        width: 100%;
+        position: relative;
+        display: block; }
+        .footer .container .row .menu a:after {
+          content: '\f105';
+          top: 6px;
+          right: 15px;
+          font-family: fontAwesome;
+          position: absolute;
+          transition-duration: 0.2s; }
+        .footer .container .row .menu a:hover {
+          transition-duration: 0.2s; }
+          .footer .container .row .menu a:hover:after {
+            right: 10px;
+            transition-duration: 0.2s; }
+      .footer .container .row .menu .sub-menu {
+        display: none;
+        visibility: hidden; }
+    .footer .container .row span.phone {
+      font-weight: 600;
+      font-size: 20px; }
   .footer .container .row {
     padding: 66px 0px; }
 

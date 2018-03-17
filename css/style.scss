@@ -487,15 +487,51 @@ body {
 			h2 {
 				padding-bottom:12px;
 				font-size:1.1rem;
-				color:white;
+				color:$head_color;
 				font-family: Merriweather,serif;
 			}
 			p {
 				font-size: 16px;
 				color:white;
 			}
+			.fa {
+				padding-right: 8px;
+			}
 			li {
 				list-style: none;
+			}
+			.menu {
+				margin:0px;
+				padding:0px;
+				a {
+					color: #fff;
+				    width: 100%;
+				    position: relative;
+				    display: block;
+				    &:after {
+					    content:'\f105';
+						top:6px;
+						right:15px;
+						font-family: fontAwesome;
+						position: absolute;
+						transition-duration: $transition_duration;
+				    }
+				    &:hover {
+					    transition-duration: $transition_duration;
+					    &:after {
+						    right:10px;
+						    transition-duration: $transition_duration;
+					    }
+				    }
+				}
+				.sub-menu {
+					display: none;
+					visibility: hidden;
+				}
+			}
+			span.phone {
+				font-weight: 600;
+				font-size: 20px;
 			}
 		}
 	}
