@@ -230,7 +230,7 @@ body {
       fill: #fff; }
 
 .content_intro {
-  padding: 66px;
+  padding: 66px 0px;
   display: block; }
   .content_intro p {
     padding: 12px 0px; }
@@ -314,7 +314,7 @@ p {
     position: relative; }
     .feautured_image .container .button {
       position: absolute;
-      right: 0;
+      right: 1px;
       bottom: 0;
       padding: 20px 62px 30px;
       transform: rotate(-1deg);
