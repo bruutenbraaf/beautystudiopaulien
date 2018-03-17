@@ -94,13 +94,7 @@ body {
         font-family: fontAwesome;
         position: absolute;
         right: 8px;
-        top: 12px;
-        -webkit-transition: all 0.3s cubic-bezier(0.06, 0.65, 0.34, 1);
-        -o-transition: all 0.3s cubic-bezier(0.06, 0.65, 0.34, 99);
-        transition: all 0.3s cubic-bezier(0.06, 0.65, 0.34, 0.99);
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99); }
+        top: 12px; }
       .header .container .row .main_menu .menu-item-has-children:hover ul.sub-menu {
         visibility: visible;
         opacity: 1;
@@ -136,28 +130,41 @@ body {
   width: 100%;
   min-height: 70vh;
   position: relative; }
+  .carousel .carousel-inner .button {
+    padding: 14px 34px 20px 24px;
+    line-height: 6;
+    color: #fff;
+    background: #3a3a3a;
+    transition-duration: 0.2s;
+    -webkit-clip-path: polygon(0 0, 100% 0, 89% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 89% 90%, 0 100%); }
+    .carousel .carousel-inner .button:hover {
+      text-decoration: none;
+      background: #a48b5e;
+      transition-duration: 0.2s; }
   .carousel .carousel-inner .carousel-item {
     min-height: 70vh;
     width: 100%;
     background: green;
     background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important; }
+    background-repeat: no-repeat !important; }
     .carousel .carousel-inner .carousel-item .container .row {
       color: white;
       display: flex;
       align-items: center;
       height: 70vh; }
       .carousel .carousel-inner .carousel-item .container .row h1 {
+        color: white;
         letter-spacing: 0.1rem;
         font-size: 2.6rem;
         font-family: 'Merriweather', serif; }
       .carousel .carousel-inner .carousel-item .container .row h2 {
+        color: white;
         font-size: 1.2rem;
-        letter-spacing: 0.1rem; }
+        letter-spacing: 0.08rem; }
   .carousel .controls {
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     position: absolute;
     background: white;
     width: 120px;
@@ -194,9 +201,12 @@ body {
   .carousel .down {
     width: 60px;
     height: 50px;
-    background: #ad976e;
+    background: #AD976E;
     position: absolute;
-    left: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     bottom: -25px;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -218,6 +228,78 @@ body {
       padding-right: 2px; }
     .carousel .down .st0 {
       fill: #fff; }
+
+.content_intro {
+  padding: 66px;
+  display: block; }
+  .content_intro p {
+    padding: 12px 0px; }
+  .content_intro .nav-link {
+    color: #3a3a3a;
+    padding: 14px 12px;
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 0px;
+    border-bottom: 1px dashed #dddddd; }
+    .content_intro .nav-link:after {
+      content: '\f105';
+      font-family: fontAwesome;
+      position: absolute;
+      right: 14px;
+      top: 12px; }
+    .content_intro .nav-link:last-child {
+      border-bottom: none; }
+    .content_intro .nav-link:hover {
+      border-radius: 0px;
+      color: #fff;
+      background: #a48b5e;
+      transition-duration: 0.2s;
+      position: relative; }
+      .content_intro .nav-link:hover:after {
+        right: 10px; }
+  .content_intro .nav-link.active {
+    border-radius: 0px;
+    color: #fff;
+    background: #AD976E;
+    transition-duration: 0.2s;
+    position: relative; }
+
+h1 {
+  color: #AD976E;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  font-family: 'Merriweather', serif; }
+
+h2 {
+  color: #3a3a3a;
+  font-size: 1rem; }
+
+p {
+  color: #3a3a3a;
+  font-size: 16px; }
+
+.button {
+  background: #3a3a3a;
+  color: white;
+  padding: 14px 22px;
+  position: relative; }
+  .button:after {
+    opacity: 0%;
+    content: '';
+    content: '\f105';
+    visibility: hidden;
+    font-family: fontAwesome;
+    transition-duration: 0.2s; }
+  .button:hover {
+    background: #AD976E;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.2s; }
+    .button:hover:after {
+      padding: 0px 0px 0px 14px;
+      visibility: visible;
+      opacity: 1;
+      transition-duration: 0.2s; }
 
 @keyframes down {
   0% {

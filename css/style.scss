@@ -1,4 +1,6 @@
 $head_color: #AD976E;
+$secondaire_color: #3a3a3a;
+
 $header_height: 90px;
 $header_logo_width: 220px;
 $header_logo_background: #AD976E;
@@ -8,6 +10,8 @@ $transition_duration: 0.2s;
 
 $carousel_height: 70vh;
 $carousel_tekst: white;
+
+$tabs_active: #AD976E;
 
 body {
 	backface-visibility: hidden;
@@ -126,12 +130,6 @@ body {
 					    position: absolute;
 					    right: 8px;
 					    top: 12px;
-					    -webkit-transition: all .3s cubic-bezier(.06,.65,.34,1);
-					    -o-transition: all .3s cubic-bezier(.06,.65,.34,99);
-					    transition: all .3s cubic-bezier(.06,.65,.34,.99);
-					    transition-property: all;
-					    transition-duration: 0.3s;
-					    transition-timing-function: cubic-bezier(0.06, 0.65, 0.34, 0.99);
 					}
 				}
 				&:hover ul.sub-menu {
@@ -184,19 +182,31 @@ body {
 	margin-top:90px;
 }
 
-
 .carousel {
 	width: 100%;
 	min-height: $carousel_height;
 	position: relative;
 	.carousel-inner {
+		.button {
+			padding: 14px 34px 20px 24px;
+		    line-height: 6;
+		    color: #fff;
+		    background: $secondaire_color;
+		    transition-duration: $transition_duration;
+		    -webkit-clip-path: polygon(0 0,100% 0,89% 90%,0 100%);
+		    clip-path: polygon(0 0,100% 0,89% 90%,0 100%);
+		    &:hover {
+			    text-decoration: none;
+			    background: darken($head_color, 5%);
+			    transition-duration: $transition_duration;
+		    }
+		}
 		.carousel-item {
 			min-height: $carousel_height;
 			width: 100%;
 			background:green;
 			background-size: cover !important;
 			background-repeat: no-repeat !important;
-			background-position: center center !important;
 			.container {
 				.row {
 					color:$carousel_tekst;
@@ -204,13 +214,15 @@ body {
 					align-items: center;
 					height: $carousel_height;
 					h1 {
+						color: white;
 						letter-spacing: 0.1rem;
 						font-size:2.6rem;
 						font-family: 'Merriweather', serif;
 					}
 					h2 {
+						color:white;
 						font-size:1.2rem;
-						letter-spacing: 0.1rem;
+						letter-spacing: 0.08rem;
 					}
 				}
 			}
@@ -218,7 +230,7 @@ body {
 	}
 	.controls {
 		right:0;
-		bottom:0;
+		bottom:-1px;
 		position: absolute;
 		background: white;
 		width:120px;
@@ -263,9 +275,12 @@ body {
 	.down {
 		width: 60px;
 	    height: 50px;
-	    background: #ad976e;
+	    background: $head_color;
 	    position: absolute;
-	    left: 50%;
+	    left: 0; 
+		right: 0; 
+		margin-left: auto; 
+		margin-right: auto; 
 	    bottom: -25px;
 		-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 		clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -292,6 +307,95 @@ body {
 		}
 	}
 }
+
+
+.content_intro {
+	padding: 66px;
+    display: block;
+    p {
+	    padding:12px 0px;
+    }
+    .nav-link {
+	    color:$header_links_colors;
+	    padding: 14px 12px;
+	    position: relative;
+	    background: #f0f0f0;
+	    border-radius: 0px;
+	    border-bottom: 1px dashed #dddddd;
+	    &:after {
+		    content: '\f105';
+			font-family: fontAwesome;
+			position: absolute;
+			right: 14px;
+			top: 12px;
+	    }
+	    &:last-child {
+		    border-bottom:none;
+	    }
+	    &:hover {
+		    border-radius: 0px;
+			color: #fff;
+			background: darken($head_color, 5%);
+			transition-duration: $transition_duration;
+			position: relative;
+			&:after {
+				right: 10px;
+			}
+	    }
+    }
+    .nav-link.active {
+	    border-radius: 0px;
+		color: #fff;
+		background: $tabs_active;
+		transition-duration: $transition_duration;
+		position: relative;
+    }
+}
+
+
+    h1 {
+	    color: $head_color;
+		letter-spacing: 0.1rem;
+		font-size:2rem;
+		font-family: 'Merriweather', serif;
+	}
+	
+	h2 {
+		color: $secondaire_color;
+		font-size:1rem;
+	}
+	
+	p {
+		color:$secondaire_color;
+		font-size: 16px;
+	}
+	
+	.button {
+		background: $secondaire_color;
+		color: white;
+		padding:14px 22px;
+		position: relative;
+		&:after {
+			opacity: 0%;
+			content:'';
+			content: '\f105';
+			visibility: hidden;
+			font-family: fontAwesome;
+			transition-duration: $transition_duration;
+		}
+		&:hover {
+			background: $head_color;
+			color:white;
+			text-decoration: none;
+			transition-duration: $transition_duration;
+			&:after {
+				padding:0px 0px 0px 14px;
+				visibility: visible;
+				opacity: 1;
+				transition-duration: $transition_duration;
+			}
+		}
+	}
 
 @keyframes down {
   0% {

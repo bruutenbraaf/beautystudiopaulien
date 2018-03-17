@@ -33,10 +33,31 @@ add_action( 'init', 'register_my_menus' );
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 if( function_exists('acf_add_options_page') ) {
-
 	acf_add_options_page('Opties');
-	
 }
+
+acf_add_options_page( array(
+
+'page_title' 	=> 'Home Page Carousel',
+'menu_title' 	=> 'Carousel',
+'menu_slug' 	=> 'home-page-carousel',
+'capability' 	=> 'edit_posts', 
+'icon_url' => 'dashicons-images-alt2',
+'position' => 7
+
+) );
+
+
+acf_add_options_page( array(
+
+'page_title' 	=> 'Home Page Tabs',
+'menu_title' 	=> 'Home tabs',
+'menu_slug' 	=> 'home-page-tabs',
+'capability' 	=> 'edit_posts', 
+'icon_url' => 'dashicons-images-alt',
+'position' => 8
+
+) );
 
 
 ?>

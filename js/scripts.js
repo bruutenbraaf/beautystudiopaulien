@@ -1,15 +1,11 @@
 $( document ).ready(function() {	
 	jQuery( '.carousel-inner').find('.carousel-item:first' ).addClass( 'active' );
-});
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 100
-    }, 300);
-});
-$(function(){
-    var hash = location.hash.replace('#','');
-    if(hash != ''){
-        location.hash = '';
-    }
+	jQuery( '.tab-content').find('.tab-pane:first' ).addClass( 'active' );
+	jQuery( 'ul.nav-tabs').find('.tab-pane:first' ).addClass( 'active' );
+	jQuery( 'ul.nav-tabs-home').find('li:first' ).addClass( 'active' );
+	jQuery( 'tab-content').find('div:first' ).addClass( 'active' );
+	jQuery( 'ul.nav-tabs').find('li:first a' ).addClass( 'active' );
+	jQuery( '.nav-pills').find('a:first' ).addClass( 'active' );
+
+	
 });
