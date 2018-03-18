@@ -23,6 +23,15 @@ add_action( 'init', 'register_my_menus' );
 	function arphabet_widgets_init() {
 		
 		register_sidebar( array(
+			'name'          => 'Pagina Sidebar',
+			'id'            => 'page_sidebar',
+			'before_widget' => '<div class="widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widgettitle">',
+			'after_title'   => '</h2>'
+		) );
+		
+		register_sidebar( array(
 			'name'          => 'Footer een',
 			'id'            => 'footer_een',
 

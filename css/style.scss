@@ -13,6 +13,8 @@ $carousel_tekst: white;
 
 $tabs_active: #AD976E;
 
+$omslagfoto_height: 44vh;
+
 body {
 	backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -22,6 +24,15 @@ body {
     img {
 	    max-width: 100%;
     }
+}
+
+a {
+	color: $head_color;
+}
+
+::selection {
+    background: $head_color;
+    color: #fff;
 }
 .header {
 	top: 0;
@@ -477,7 +488,7 @@ body {
 	color:white;
 	z-index: 55;
 	position: relative;
-	margin-top: -30px;
+	margin-top: -34px;
 	background:$secondaire_color;
 	-webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 	clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
@@ -562,10 +573,144 @@ body {
 	    top: -2px;
 	    position: absolute;
 	    padding: 4px 28px 12px;
-	    background: #ad976e;
+	    background: $head_color;
 	    -webkit-clip-path: polygon(0 0,100% 0,83% 85%,18% 85%);
 	    clip-path: polygon(0 0,100% 0,83% 85%,18% 85%);
 	}
+}
+
+
+.omslagfoto {
+	background:#999999;
+	position: relative;
+	background-size: cover !important;
+	background-attachment: fixed !important;
+	.cover {
+		top:0;
+		left:0;
+		width:100%;
+		height: 100%;
+		position: absolute;
+		background:rgba(0,0,0,0.1);
+	}
+	.container {
+		position: relative;
+		z-index: 555;
+		.afspraak {
+			color: #fff;
+			padding:10px 34px 10px 44px;
+			right: 15px;
+			bottom:0px;
+			position: absolute;
+			background: $secondaire_color;
+			-webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+			clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+			&:after {
+				opacity: 0%;
+				content:'';
+				content: '\f105';
+				visibility: hidden;
+				font-family: fontAwesome;
+				transition-duration: $transition_duration;
+			}
+			&:hover {
+				background: $head_color;
+				color:white;
+				text-decoration: none;
+				transition-duration: $transition_duration;
+			&:after {
+				padding:0px 0px 0px 14px;
+				visibility: visible;
+				opacity: 1;
+				transition-duration: $transition_duration;
+			}
+		}
+
+		}
+		.row {
+			height: $omslagfoto_height;
+			display: flex;
+			align-items: center;
+			h1, h2 {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.widget {
+	margin-bottom:34px;
+	color: $secondaire_color;
+	a {
+		color:$secondaire_color;
+		transition-duration: $transition_duration;
+		&:hover {
+			color:$head_color;
+			transition-duration: $transition_duration;
+		}
+	}
+	ul {
+		margin:0;
+		padding:0;
+		list-style: none;
+		li {
+			a {
+				position: relative;
+				display: block;
+				width:90%;				
+					&:after {
+						position: absolute;
+						content:'\f105';
+						top:6px;
+						right:10px;
+						font-family: fontAwesome;
+						transition-duration: $transition_duration;
+					}
+					&:hover:after {
+						right:6px;
+						transition-duration: $transition_duration;
+					}
+			}
+		}
+	}
+	.screen-reader-text {
+		display: none;
+	}
+	.widgettitle {
+		color: $head_color;
+		letter-spacing: 0.1rem;
+		font-size:1.3rem;
+		padding-bottom:8px;
+		font-family: 'Merriweather', serif;
+	}
+}
+
+.pagina_aanbieding {
+	background: $head_color;
+	.appointment_button {
+		float:right;
+		text-align: right;
+		.button {
+			&:hover {
+				background: white;
+				color: $head_color;
+			}
+		}
+	}
+	.container {
+		.row {
+			height: 28vh;
+			display: flex;
+			align-items: center;
+			h1, h2 {
+				color:#fff;
+			}
+		}
+	}
+}
+
+.page_content {
+	padding:10vh 0px;
 }
 
 @keyframes down {
