@@ -502,10 +502,15 @@ p {
     margin: 0;
     padding: 0;
     list-style: none; }
+    .widget ul li:hover {
+      text-decoration: none; }
     .widget ul li a {
       position: relative;
       display: block;
-      width: 90%; }
+      width: 90%;
+      text-decoration: none; }
+      .widget ul li a:hover {
+        text-decoration: none !important; }
       .widget ul li a:after {
         position: absolute;
         content: '\f105';

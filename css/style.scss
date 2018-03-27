@@ -654,10 +654,17 @@ a {
 		padding:0;
 		list-style: none;
 		li {
+			&:hover {
+				text-decoration: none;
+			}
 			a {
 				position: relative;
 				display: block;
-				width:90%;				
+				width:90%;
+				text-decoration: none;	
+					&:hover {
+						text-decoration: none !important;
+					}			
 					&:after {
 						position: absolute;
 						content:'\f105';
