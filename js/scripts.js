@@ -20,4 +20,18 @@ $( document ).ready(function() {
 	         $('.header .branding img').stop().animate({ 'height': "76px" }, 300);
 	    }
 	});
+	
+	
+	
+	$( ".burger" ).click( function(event){
+		$('.header .container .row .main_menu').toggleClass("tog");		
+		if ( $('.header .container .row .main_menu').hasClass("tog") ) {
+			$('.header .container .row .main_menu').stop().animate({ 'visibility': "hidden", 'opacity': "0", 'height': "0vh" });
+		}
+		else {
+			$('.header .container .row .main_menu').stop().animate({ 'visibility': "visible", 'opacity': "1", 'height': "100vh" });
+	    }
+	});
+
+	
 });

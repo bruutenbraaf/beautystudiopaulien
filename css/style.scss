@@ -476,7 +476,7 @@ a {
 	    .button {
 		    background: $head_color;
 		    margin-top:20px;
-		    line-height: 3;
+		    line-height: 4;
 		    &:hover {
 			    background: $secondaire_color;
 		    }
@@ -720,6 +720,16 @@ a {
 	padding:10vh 0px;
 }
 
+.the_content {
+		ul {
+			margin: 0px;
+			padding: 0px 17px;
+			li {
+				color: $secondaire_color;
+			}
+	}
+}
+
 @keyframes down {
   0% {
     bottom: -25px;
@@ -730,4 +740,87 @@ a {
   100% {
     bottom: -25px;
   }
+}
+
+.header {
+	.burger {
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.header {
+		.burger {
+			display: block;
+		    position: fixed;
+		    top: 32px;
+		    right: 32px;
+			div {
+				min-width:20px;
+				min-height: 2px;
+				background:$head_color;
+				margin:4px 0px;
+			}
+			&:hover {
+				margin-top:-4px;
+				div {
+					margin:6px 0px;	
+				}
+			}
+		}
+	}
+	.header {
+		.container {
+			.row { 
+				.main_menu {
+				    align-items: center;
+				    width: 100%;					    
+				    background: white;
+				    z-index: -9;
+				    height: 0vh;
+				    display: flex;
+				    visibility: visible;
+				    opacity: 0;
+				    ul {
+						li {
+					    	float: none;
+							transition-duration: .2s;
+					    }
+		    		}
+		    	}
+		    }
+		}
+	}
+	.header {
+		.appointment {
+			display:none;
+		}
+	}
+	.page_content {
+		padding: 10vh 15px;
+	}
+	
+	.footer {
+	    margin-top: -22px;
+	    -webkit-clip-path: polygon(0 2%,100% 0,100% 100%,0 100%);
+	    clip-path: polygon(0 2%,100% 0,100% 100%,0 100%);
+	}
+	.pagina_aanbieding { 
+		.container { 
+			.row {
+			    height: 31vh;
+			    display: flex;
+			    align-items: center;
+			    padding-bottom: 44px;
+			    text-align: left;
+			}
+		}
+	}
+	.pagina_aanbieding {
+		.appointment_button {
+		    float: left;
+		    text-align: left;
+    	}
+	}
 }

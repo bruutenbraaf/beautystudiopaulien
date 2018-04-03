@@ -22,7 +22,7 @@ get_header(); ?>
 			<div class="col-md-3">
 				<?php dynamic_sidebar( 'page_sidebar' ); ?>
 			</div>
-			<div class="col-md-9">
+			<div class="col-md-9 the_content">
 				<?php the_field( 'pagina_tekst' ); ?>
 			</div>
 		</div>

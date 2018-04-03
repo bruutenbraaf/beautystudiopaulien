@@ -22,11 +22,18 @@
 			</a>
 			<div class="col-md-2">	
 			</div>
-			<div class="col-md-8 main_menu">
+			<div class="col-md-8 main_menu tog">
 				<?php wp_nav_menu( array( 'theme_location' => 'hoofd_menu' ) ); ?>
 			</div>
-			<div class="col-md-2 appointment">	
-				<a href="<?php the_field( 'appointment_link', 'option' ); ?>"><?php the_field( 'appointment_text', 'option' ); ?></a>
+			<div class="col-md-2">	
+				<div class="appointment">
+					<a href="<?php the_field( 'appointment_link', 'option' ); ?>"><?php the_field( 'appointment_text', 'option' ); ?></a>
+				</div>
+				<div class="burger">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 		</div>
 	</div>
