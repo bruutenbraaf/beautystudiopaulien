@@ -33,5 +33,20 @@ $( document ).ready(function() {
 	    }
 	});
 
-	
+	$( ".check_button" ).click( function(event){
+		$('.check_button').toggleClass("yes");		
+		if ( $('.check_button').hasClass("yes") ) {
+			$('.not_checked').stop().animate({ 'left': "2px", 'backgroundColor': "888"}), 100;	
+			$('.not_checked').removeClass("checked");	
+			$('.afspraak_form').fadeOut(300);
+			$('.contact_form').fadeIn(300);
+		}
+		else {
+			$('.not_checked').stop().animate({ 'left': "32px", 'backgroundColor': "333"}), 100;
+			$('.not_checked').addClass("checked");	
+			$('.afspraak_form').fadeIn(300);
+			$('.contact_form').fadeOut(300);
+	    }
+	});
+		
 });

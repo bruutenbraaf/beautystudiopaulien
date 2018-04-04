@@ -583,6 +583,105 @@ p {
 .header .burger {
   display: none; }
 
+#map {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%; }
+
+.check_button {
+  width: 60px;
+  min-height: 30px;
+  border-radius: 400px;
+  border: 1px solid #c5c5c5;
+  position: relative;
+  float: right; }
+  .check_button .not_checked {
+    background-color: #c5c5c5;
+    width: 24px;
+    min-height: 24px;
+    border-radius: 40px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    opacity: 1; }
+  .check_button .checked {
+    background-color: #ae986f; }
+
+.afspraakmaken {
+  float: left; }
+
+.form {
+  padding-top: 15px;
+  clear: both;
+  position: relative; }
+  .form .afspraak_form {
+    display: none;
+    top: 15px; }
+  .form .contact_form {
+    top: 15px; }
+  .form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #e4e4e4; }
+    .form input::placeholder {
+      color: #e4e4e4; }
+  .form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e4e4e4; }
+
+textarea::-webkit-input-placeholder {
+  color: #e4e4e4; }
+
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #e4e4e4; }
+
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e4e4e4; }
+
+textarea:-ms-input-placeholder {
+  color: #e4e4e4; }
+
+input[type=tel] ::-webkit-input-placeholder {
+  color: #e4e4e4; }
+
+input[type=tel] :-moz-placeholder {
+  /* Firefox 18- */
+  color: #e4e4e4; }
+
+input[type=tel] ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #e4e4e4; }
+
+input[type=tel] :-ms-input-placeholder {
+  color: #e4e4e4; }
+
+label {
+  width: 100%; }
+
+.helft {
+  float: left;
+  width: 50%;
+  padding: 0px 15px 0px 0px; }
+  .helft:nth-child(3) {
+    padding: 0px 0px 0px 15px; }
+
+[type=submit] {
+  cursor: pointer;
+  background: #ad976e;
+  margin-top: 20px;
+  line-height: 2;
+  border: none !important;
+  padding: 10px 40px !important;
+  width: auto !important;
+  color: white; }
+  [type=submit]:hover {
+    background: #3a3a3a; }
+
 @media only screen and (max-width: 1024px) {
   .header .burger {
     display: block;
@@ -598,6 +697,13 @@ p {
       margin-top: -4px; }
       .header .burger:hover div {
         margin: 6px 0px; }
+
+  .helft {
+    width: 100%;
+    padding: 0px;
+    float: none; }
+    .helft:nth-child(3) {
+      padding: 0px; }
 
   .header .container .row .main_menu {
     align-items: center;
