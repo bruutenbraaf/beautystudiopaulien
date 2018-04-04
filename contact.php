@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php dynamic_sidebar( 'page_sidebar' ); ?>
 			</div>
 			<div class="col-md-9 the_content">		
-				<h1>Contact & Afspraak maken</h1>
+				<h2>Contact & Afspraak maken</h2>
 				<div class="afspraakmaken">Voor afspraak maken vink de knop aan: </div>
 				<div class="check_button yes">
 					<div class="not_checked">
