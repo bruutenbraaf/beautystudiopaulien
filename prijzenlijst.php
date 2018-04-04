@@ -52,6 +52,8 @@ get_header(); ?>
 <?php else: ?>
 	<?php // no layouts found ?>
 <?php endif; ?>
+
+<?php the_field( 'extra_toevoeging' ); ?>
 	
 				
 			</div>
