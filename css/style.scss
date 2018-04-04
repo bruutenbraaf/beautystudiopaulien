@@ -717,7 +717,7 @@ a {
 }
 
 .page_content {
-	padding:10vh 0px;
+	padding:10vh 15px;
 }
 
 .the_content {
@@ -727,6 +727,30 @@ a {
 			li {
 				color: $secondaire_color;
 			}
+	}
+}
+.list {
+	padding-bottom: 34px;
+    display: grid;
+	.item_prijs {
+		&:hover {
+			background: #f2f2f2;
+			transition-duration: $transition_duration;
+		}
+		.beschrijving {
+			width:80%;
+			float:left;
+		}
+		.prijs {
+			width:20%;
+			float:left;
+			text-align: right;
+			font-weight: bold;
+			color:$head_color;
+			&:before {
+				content:'€';
+			}
+		}
 	}
 }
 
@@ -786,6 +810,11 @@ a {
 						li {
 					    	float: none;
 							transition-duration: .2s;
+							text-align: center;
+							a {
+								display: block;
+								font-size: 18px;
+							}
 					    }
 		    		}
 		    	}
@@ -796,9 +825,6 @@ a {
 		.appointment {
 			display:none;
 		}
-	}
-	.page_content {
-		padding: 10vh 15px;
 	}
 	
 	.footer {

@@ -105,6 +105,17 @@ acf_add_options_page( array(
 
 ) );
 
+acf_add_options_page( array(
+
+'page_title' 	=> 'Prijzenlijst',
+'menu_title' 	=> 'Prijzenlijst',
+'menu_slug' 	=> 'prijzenlijst',
+'capability' 	=> 'edit_posts', 
+'icon_url' => 'dashicons-tag',
+'position' => 9
+
+) );
+
 
 
 

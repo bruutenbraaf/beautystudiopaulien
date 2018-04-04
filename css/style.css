@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -546,13 +547,31 @@ p {
       color: #fff; }
 
 .page_content {
-  padding: 10vh 0px; }
+  padding: 10vh 15px; }
 
 .the_content ul {
   margin: 0px;
   padding: 0px 17px; }
   .the_content ul li {
     color: #3a3a3a; }
+
+.list {
+  padding-bottom: 34px;
+  display: grid; }
+  .list .item_prijs:hover {
+    background: #f2f2f2;
+    transition-duration: 0.2s; }
+  .list .item_prijs .beschrijving {
+    width: 80%;
+    float: left; }
+  .list .item_prijs .prijs {
+    width: 20%;
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    color: #AD976E; }
+    .list .item_prijs .prijs:before {
+      content: '€'; }
 
 @keyframes down {
   0% {
@@ -591,13 +610,14 @@ p {
     opacity: 0; }
     .header .container .row .main_menu ul li {
       float: none;
-      transition-duration: .2s; }
+      transition-duration: .2s;
+      text-align: center; }
+      .header .container .row .main_menu ul li a {
+        display: block;
+        font-size: 18px; }
 
   .header .appointment {
     display: none; }
-
-  .page_content {
-    padding: 10vh 15px; }
 
   .footer {
     margin-top: -22px;
