@@ -741,7 +741,8 @@ label {
   .pagina_aanbieding .appointment_button {
     float: left;
     text-align: left;
-    margin-top: 10px; }
+    margin-top: 10px;
+    margin-bottom: 20px; }
 
   .feautured_image .container .button {
     padding: 20px 48px 22px;
