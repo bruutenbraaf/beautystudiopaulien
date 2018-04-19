@@ -712,7 +712,7 @@ label {
     z-index: -9;
     height: 0vh;
     display: flex;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0; }
     .header .container .row .main_menu ul li {
       float: none;
