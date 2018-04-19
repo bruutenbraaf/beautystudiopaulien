@@ -739,6 +739,29 @@ label {
 
   .pagina_aanbieding .appointment_button {
     float: left;
-    text-align: left; } }
+    text-align: left; }
+
+  .feautured_image .container .button {
+    padding: 20px 48px 22px;
+    font-size: 14px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto; }
+
+  h1 {
+    color: #ad976e;
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+    font-family: Merriweather,serif; }
+
+  .nav-pills {
+    margin-bottom: 10vh; }
+
+  .informatie_content .col-md-6:nth-child(2) {
+    margin: 0px 15px;
+    border-radius: 0px 0px 2px 2px; }
+
+  .informatie_content img {
+    border-radius: 2px 2px 0 0px; } }
 
 /*# sourceMappingURL=style.css.map */
