@@ -735,11 +735,13 @@ label {
     display: flex;
     align-items: center;
     padding-bottom: 44px;
-    text-align: left; }
+    text-align: left;
+    padding-top: 20px; }
 
   .pagina_aanbieding .appointment_button {
     float: left;
-    text-align: left; }
+    text-align: left;
+    margin-top: 10px; }
 
   .feautured_image .container .button {
     padding: 20px 48px 22px;
